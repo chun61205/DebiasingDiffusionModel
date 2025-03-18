@@ -1,0 +1,19 @@
+python3 examples/trainDreambooth.py \
+  --instanceDataDir="../mixed_dataset/mnist01"\
+  --labelDir="../mixed_dataset/labels.pkl" \
+  --promptDir="../mixed_dataset/mnist_prompts.txt" \
+  --outputDir="results/mnist_005_2" \
+  --pretrainedModelNameOrPath="sd-legacy/stable-diffusion-v1-5"  \
+  --resolution=32 \
+  --trainBatchSize=1 \
+  --useLora \
+  --reconstructionWeight=0.95 \
+  --indicatorWeight=0.05 \
+  --trainTextEncoder \
+  --gradientAccumulationSteps=4 \
+  --maxTrainSteps=4000 \
+  --learningRate=1e-5 \
+  --lrScheduler="constant" \
+  --lrWarmupSteps=0 \
+  --numValidationImages=1 \
+  --validationSteps=500 \
